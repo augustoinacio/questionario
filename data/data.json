@@ -1,0 +1,49 @@
+[{
+        "codigo": 1,
+        "texto": "Nome",
+        "type": "text",
+        "obrigatorio": true,
+        "mensagem": "Informe o nome",
+        "length": 35
+    },
+    {
+        "codigo": 2,
+        "texto": "Sobreome",
+        "type": "text",
+        "obrigatorio": true,
+        "mensagem": "Informe o sobrenome",
+        "length": 35
+    },
+    {
+        "codigo": 3,
+        "texto": "Data de Nascimento",
+        "type": "date",
+        "obrigatorio": true,
+        "mensagem": "Informe a date de Nascimento.",
+        "length": 0
+    },
+    {
+        "codigo": 4,
+        "texto": "Questão de V/F",
+        "type": "boolean",
+        "obrigatorio": true,
+        "mensagem": "Informe a Resposta.",
+        "length": 0
+    },
+    {
+        "codigo": 5,
+        "texto": "Questão de V/F",
+        "type": "boolean",
+        "obrigatorio": true,
+        "mensagem": "Informe a Resposta.",
+        "length": 0,
+        "filhas": {
+            "codigo": 5,
+            "texto": "Questão de V/F",
+            "type": "boolean",
+            "obrigatorio": true,
+            "mensagem": "Informe a Resposta.",
+            "length": 0
+        }
+    }
+]
