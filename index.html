@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="node_modules/angular/angular-csp.css"
+    <link rel="stylesheet" href="node_modules/angular/angular-csp.css">
+    <link rel="stylesheet" href="scripts/style.css">
 </head>
 <body >
     <div ng-controller="questionController">
-        
+        <div ng-repeat="questao in questoes">
+            <teste questao="questao"></teste>
+        </div>       
     </div>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
@@ -17,5 +20,6 @@
     <script src="scripts/app.js"></script>
     <script src="questions/questions.ctr.js"></script>
     <script src="questions/questions.fac.js"></script>
+    <script src="questions/teste.directive.js"></script>
 </body>
 </html>

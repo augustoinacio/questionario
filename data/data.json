@@ -8,7 +8,7 @@
     },
     {
         "codigo": 2,
-        "texto": "Sobreome",
+        "texto": "Sobrenome",
         "type": "text",
         "obrigatorio": true,
         "mensagem": "Informe o sobrenome",
@@ -18,7 +18,7 @@
         "codigo": 3,
         "texto": "Data de Nascimento",
         "type": "date",
-        "obrigatorio": true,
+        "obrigatorio": false,
         "mensagem": "Informe a date de Nascimento.",
         "length": 0
     },

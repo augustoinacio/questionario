@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/augustoinacio/questionario/issues"
   },
-  "homepage": "https://github.com/augustoinacio/questionario#readme"
+  "homepage": "https://github.com/augustoinacio/questionario#readme",
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  }
 }

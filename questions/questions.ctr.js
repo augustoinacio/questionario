@@ -1,17 +1,20 @@
-(function(){
+(function () {
     "use strict";
     angular.module('app')
-        .controller("questionController", function($scope, questionsFactory){
-            $scope.message = 'teste de bind';
-
-            var questoes = [];
-
-            questionsFactory.getQuestions().then(function(questions){
-                questoes = questions.data;
-                console.log('Questoes: ' + JSON.stringify(questoes));    
-                trataForm();                    
-            });
-
+        .controller("questionController", function ($scope, questionsFactory) {
+           
+            var formulario = [1, 2, 3];
+           
+            var questoes = questionsFactory.getQuestions().then(function (questoes) {
+                var carga = questoes.data;
+                $scope.questoes = filtroCampos(formulario, carga);
+            });    
+            
+            $scope.respostas = [{
+                codigoFormulario : 0,
+                codigoQuestao : 0,
+                string : ''
+            }];
 
             function filtroCampos(formulario, questoes){
                 var questoesDoForm = [];
@@ -24,12 +27,6 @@
                 });
                 return questoesDoForm;
             }
-            function trataForm(){
-                var formulario = [1, 2, 3];
-                var formularioFiltrado = filtroCampos(formulario, questoes);
-                console.log('Questoes do form ' + JSON.stringify(formularioFiltrado));
-                
-            }
 
-        })
+        });
 })();
