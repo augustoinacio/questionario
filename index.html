@@ -10,8 +10,9 @@
 </head>
 <body >
     <div ng-controller="questionController" class="questionario">
-        <div ng-repeat="questao in questoes" >
-            <teste questao="questao"></teste>
+        <!--<div ng-repeat="questao in questoes" >-->
+        <div>
+            <teste questao="{"codigo": 1, "texto": "Nome",  "type": "text", "obrigatorio": true, "mensagem": "Informe o nome", "length": 35}"></teste>
         </div>       
     </div>
     <script src="node_modules/angular/angular.js"></script>

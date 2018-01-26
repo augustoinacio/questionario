@@ -4,18 +4,11 @@
     var teste = function () {
 
         var link = function (scope, elem, attrs){
-            //console.log(elem);
-            //console.log(scope);
-            //console.log(attrs);
-            console.log(scope.questao);
             var tipoQuestao = verificaTipo(scope.questao);
-            console.log(tipoQuestao);
         }
         
         function template() {
-            return '<label>{{questao.texto}}</label>'+
-            '<span ng-show={{questao.obrigatorio}} class="required">*</span><br>'+
-            '<input type="questao.type"></input>';            
+            return verificaTipo();            
         }
 
         function verificaTipo(questao){
@@ -33,13 +26,36 @@
                 return '<label>{{questao.texto}}</label>'+
                 '<span ng-show={{questao.obrigatorio}} class="required">*</span><br>'+
                 '<input type="date"></input>';
-            }           
+            }  
+            
+            function simpleQuestion(){
+                var div = '<div>', finalizaDiv = '</div>';
+                div+=iniciaLabel;
+                div+=questao.texto;
+            }
+
+            function dateQuestion(){
+
+            }
+
+            function numberQuestion(){
+
+            }
+
+            function yesOrNoQuestion(options){
+
+            }
         }
+
+        var iniciaLabel = '<label>', 
+            finalizaLabel = '</label>', 
+            span = '<span>*</span>', 
+            input='<input></input>';
+        
         
         return {
             scope: '=',
-            template: template(),
-            link : link
+            template: template()            
         }
 
     }
